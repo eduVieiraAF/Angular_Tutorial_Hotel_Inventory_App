@@ -1,6 +1,7 @@
 # HotelInventoryApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.9.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.9. and it is a based on a tutorial so that I can learn Angular
+
 
 ## Development server
 
