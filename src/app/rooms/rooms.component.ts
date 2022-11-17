@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RoomsComponent implements OnInit {
 
+  hideTitle = false;
   hideRooms = true;
   hotelName = "Pullman";
   numberOfRooms = 10;
@@ -17,5 +18,9 @@ export class RoomsComponent implements OnInit {
 
   toggle() {
     this.hideRooms = !this.hideRooms;
+  }
+
+  show() {
+    this.hideTitle = !this.hideTitle;
   }
 }

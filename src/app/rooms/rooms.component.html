@@ -1,5 +1,6 @@
-<h2>Welcome to {{ hotelName }}</h2>
+<h2 [hidden]="hideTitle">Welcome to {{ hotelName }}</h2>
 
 <div [hidden]="hideRooms">Number of rooms available:
-<div [innerText]="numberOfRooms"></div></div>
-<button (click)="toggle()">Toggle</button>
+<div [innerText]="numberOfRooms"></div></div><br>
+<input type="checkbox"(click)="toggle()"><label>Show rooms</label><br>
+<input type="checkbox" (click)="show()"><label>Hide title</label>
