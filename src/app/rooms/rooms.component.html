@@ -2,5 +2,10 @@
 
 <div [hidden]="hideRooms">Number of rooms available:
 <div [innerText]="numberOfRooms"></div></div><br>
+
 <input type="checkbox"(click)="toggle()"><label>Show rooms</label><br>
-<input type="checkbox" (click)="show()"><label>Hide title</label>
+<input type="checkbox" (click)="show()"><label>Hide title</label><br>
+<br>
+
+<button id="add" (click)="addRoom()">Vacate <br />available rooms {{ numberOfRooms }} </button>
+<button id="take" (click)="takeRoom()">Occupy <br />available rooms{{ numberOfRooms }} </button>
