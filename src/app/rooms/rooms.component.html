@@ -1,8 +1,9 @@
 <h2 [hidden]="hideTitle">Welcome to {{ hotelName }}</h2>
 <hr>
 <div [hidden]="hideRooms">Number of rooms:<br>
-<label [innerText]="rooms.totalRooms" title="Total"></label><label> Total</label><br>
+
 <label>available: </label><label [innerText]="rooms.availableRooms"></label><br>
+<div *ngIf="rooms.availableRooms  > 0 ">+++</div>
 <label>Booked: </label><label [innerText]="rooms.bookedRooms"></label>
 </div><br>
 
