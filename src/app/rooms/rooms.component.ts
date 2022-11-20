@@ -37,19 +37,23 @@ export class RoomsComponent implements OnInit {
   addRoom() {
     this.rooms.availableRooms = this.rooms.availableRooms + 1;
     this.rooms.bookedRooms = this.rooms.bookedRooms -1;
-    
-    if (this.rooms.availableRooms === 25) {
+
+    if (this.rooms.availableRooms >= 25) {
       alert("Fully available");
       document.getElementById("add")?.setAttribute("disabled","");
+    }
+
+    if (this.rooms.bookedRooms > 0) {
+      document.getElementById("take")?.removeAttribute('disabled')
     }
   }
 
   takeRoom() {
-    this.rooms.bookedRooms = this.rooms.bookedRooms - 1;
-    this.rooms.availableRooms = this.rooms.availableRooms +1;
+    this.rooms.bookedRooms = this.rooms.bookedRooms + 1;
+    this.rooms.availableRooms = this.rooms.availableRooms - 1;
 
-    if (this.rooms.bookedRooms <= 0) {
-      this.rooms.bookedRooms = 0;
+    if (this.rooms.bookedRooms >= 25) {
+      document.getElementById("take")?.setAttribute("disabled", "")
       alert("Fully booked");
     }
 
