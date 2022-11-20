@@ -3,7 +3,7 @@
 <div [hidden]="hideRooms">Number of rooms:<br>
 
 <label>available: </label><label [innerText]="rooms.availableRooms"></label><br>
-<div *ngIf="rooms.availableRooms  > 0 ">+++</div>
+<label *ngIf="rooms.availableRooms  > 0 ">+++</label>
 <label>Booked: </label><label [innerText]="rooms.bookedRooms"></label>
 </div><br>
 
