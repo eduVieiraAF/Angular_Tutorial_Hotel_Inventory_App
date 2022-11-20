@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { delay } from 'rxjs';
+import { Room } from './rooms'
+
 
 @Component({
   selector: 'hinv-rooms',
@@ -11,7 +12,13 @@ export class RoomsComponent implements OnInit {
   hideTitle = false;
   hideRooms = true;
   hotelName = "Pullman";
-  numberOfRooms = 10;
+  //numberOfRooms = 10;
+
+  rooms: Room = {
+    availableRooms: 15,
+    bookedRooms: 10,
+    totalRooms: 25
+  }
 
   constructor() { }
 
@@ -28,23 +35,25 @@ export class RoomsComponent implements OnInit {
   }
 
   addRoom() {
-    this.numberOfRooms = this.numberOfRooms + 1;
-
-    if (this.numberOfRooms === 25) {
+    this.rooms.availableRooms = this.rooms.availableRooms + 1;
+    this.rooms.bookedRooms = this.rooms.bookedRooms -1;
+    
+    if (this.rooms.availableRooms === 25) {
       alert("Fully available");
       document.getElementById("add")?.setAttribute("disabled","");
     }
   }
 
   takeRoom() {
-    this.numberOfRooms = this.numberOfRooms - 1;
+    this.rooms.bookedRooms = this.rooms.bookedRooms - 1;
+    this.rooms.availableRooms = this.rooms.availableRooms +1;
 
-    if (this.numberOfRooms <= 0) {
-      this.numberOfRooms = 0;
+    if (this.rooms.bookedRooms <= 0) {
+      this.rooms.bookedRooms = 0;
       alert("Fully booked");
     }
 
-    if (this.numberOfRooms < 25) {
+    if (this.rooms.bookedRooms < 25) {
       document.getElementById("add")?.removeAttribute('disabled');
     }
   }
