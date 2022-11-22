@@ -3,8 +3,8 @@
 <div [hidden]="hideRooms">Number of rooms:<br>
 
 <label>available: </label><label [innerText]="rooms.availableRooms"></label><br>
-<label *ngIf="rooms.availableRooms  > 0 ">+++</label>
-<label>Booked: </label><label [innerText]="rooms.bookedRooms"></label>
+<label>Booked: </label><label [innerText]="rooms.bookedRooms"></label><br>
+<label *ngIf="rooms.availableRooms  == 0 ">ALL BOOKED</label>
 </div><br>
 
 <input type="checkbox"(click)="toggle()"><label>Show rooms</label><br>
@@ -13,3 +13,22 @@
 
 <button id="add" (click)="addRoom()">Check-out <br />available rooms {{ rooms.availableRooms }} </button>
 <button id="take" (click)="takeRoom()">Check-in <br />Booked rooms {{ rooms.bookedRooms }} </button>
+<hr>
+<h2>Room Types</h2>
+<!--{{roomList}}-->
+<table>
+    <tr>
+        <th>Even/Odd</th>
+        <th>Index</th>
+        <th>Room type</th>
+        <th>Room price</th>
+        <th>Room amenities</th>
+    </tr>
+    <tr *ngFor = 'let room of roomList; let e = even; let o = odd; let i = index'>
+        <td>{{ e ? "Even" : "Odd" }}</td>
+        <td>{{ i }}</td>
+        <td>{{ room.roomType }}</td>
+        <td>USD ${{ room.price }}</td>
+        <td>{{ room.amenities }}</td>
+    </tr>
+</table>
