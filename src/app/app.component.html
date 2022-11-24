@@ -1,5 +1,17 @@
 <h1>Room Inventory</h1>
 
+<div [ngSwitch] = "role">
+    <div *ngSwitchCase="'User'">
+        <h2>Welcome User!</h2>
+    </div>
+    <div *ngSwitchCase="'Admin'">
+        <h2>Welcome Admin!</h2>
+    </div>
+    <div *ngSwitchDefault>
+        <h2>Login to access all features</h2>
+    </div>
+</div>
+
 <hinv-rooms></hinv-rooms>
 
 
