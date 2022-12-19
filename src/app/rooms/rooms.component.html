@@ -1,6 +1,7 @@
 <h2 [hidden]="hideTitle">Welcome to {{ hotelName }}</h2>
 <hr>
-<div [hidden]="hideRooms">Number of rooms:<br>
+<div [ngStyle]="{'color' : rooms.availableRooms ? 'gray' : 'brown'}"
+[hidden]="hideRooms">Number of rooms:<br>
 
 <label>available: </label><label [innerText]="rooms.availableRooms"></label><br>
 <label>Booked: </label><label [innerText]="rooms.bookedRooms"></label><br>
@@ -24,7 +25,8 @@
         <th>Room price</th>
         <th>Room amenities</th>
     </tr>
-    <tr *ngFor = 'let room of roomList; let e = even; let o = odd; let i = index'>
+    <tr [ngClass]="e? 'even' : 'odd'"
+    *ngFor = 'let room of roomList; let e = even; let o = odd; let i = index'>
         <td>{{ e ? "Even" : "Odd" }}</td>
         <td>{{ i }}</td>
         <td>{{ room.roomType }}</td>

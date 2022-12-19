@@ -9,7 +9,7 @@ import { Room, RoomList } from './rooms';
 export class RoomsComponent implements OnInit {
     hideTitle = false;
     hideRooms = true;
-    hotelName = 'Pullman';
+    hotelName = 'Palm Tree Spa';
     //numberOfRooms = 10;
 
     rooms: Room = {
