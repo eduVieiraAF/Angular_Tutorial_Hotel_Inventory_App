@@ -26,6 +26,7 @@ export class RoomsComponent implements OnInit {
             checkOutTime: new Date('12-Sep-2022'),
             price: 490,
             photo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPa8YY87r0NStXs2OOWbLAltPg-ld7kgQoNw&usqp=CAU',
+            rating: 4.178
         },
 
         {
@@ -35,6 +36,7 @@ export class RoomsComponent implements OnInit {
             checkOutTime: new Date('12-Sep-2022'),
             price: 690,
             photo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPa8YY87r0NStXs2OOWbLAltPg-ld7kgQoNw&usqp=CAU',
+            rating: 4.678
         },
 
         {
@@ -44,6 +46,7 @@ export class RoomsComponent implements OnInit {
             checkOutTime: new Date('12-Sep-2022'),
             price: 890,
             photo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPa8YY87r0NStXs2OOWbLAltPg-ld7kgQoNw&usqp=CAU',
+            rating: 4.7921
         },
     ];
 

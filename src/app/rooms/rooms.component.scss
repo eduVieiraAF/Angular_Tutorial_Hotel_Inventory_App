@@ -1,7 +1,22 @@
 .even {
-    background-color: cadetblue;
+    background-color: powderblue;
 }
 
 .odd {
     background-color: bisque;
+}
+
+table {
+    padding: 1px;
+}
+
+th {
+    padding: 3px;
+    font-family: cursive;
+}
+
+td {
+    padding: 8px;
+    margin: 3px;
+    font-family: cursive;
 }
