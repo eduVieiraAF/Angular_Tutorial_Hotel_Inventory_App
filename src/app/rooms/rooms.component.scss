@@ -1,22 +1,31 @@
 .even {
-    background-color: powderblue;
+    background-color: lightpink;
 }
 
 .odd {
-    background-color: bisque;
+    background-color: lightseagreen;
 }
 
-table {
-    padding: 1px;
+.table {
+    background-color: paleturquoise;
+    padding: 8px;
+    text-align: center;
+    border-radius: 30px;
+    border: 3px double lightcoral;
+    box-shadow: 2px 2px 2px black, 5px 5px 6px gray;
+
 }
 
 th {
-    padding: 3px;
-    font-family: cursive;
+    padding: 10px;
+    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border-radius: 20%;
+
 }
 
 td {
     padding: 8px;
-    margin: 3px;
     font-family: cursive;
+    border-radius: 20px;
+    box-shadow: 1px 1px 1px black ;
 }

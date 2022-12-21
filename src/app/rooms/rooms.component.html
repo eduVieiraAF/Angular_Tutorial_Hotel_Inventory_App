@@ -17,7 +17,7 @@
 <hr>
 <h2>Room Types</h2>
 <!--{{roomList}}-->
-<table>
+<table class="table">
     <tr>
         <th>Even/Odd</th>
         <th>Index</th>
@@ -32,7 +32,7 @@
         <td>{{ e ? "Even" : "Odd" }}</td>
         <td>{{ i }}</td>
         <td>{{ room.roomType | titlecase}}</td>
-        <td>{{ room.price | currency : "GBP"}}</td>
+        <td>{{ room.price | currency : "AUD" }}</td>
         <td>{{ room.amenities | lowercase }}</td>
         <td>{{ room.rating | number: "1.1-2"}}</td>
         <td>{{ room.checkInTime | date }}</td>
