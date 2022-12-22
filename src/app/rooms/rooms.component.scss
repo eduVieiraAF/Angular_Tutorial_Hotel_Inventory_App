@@ -1,3 +1,7 @@
+$font : Verdana, Geneva, Tahoma, sans-serif;
+$radius1 : 20px;
+$radius2 : 30px;
+
 .even {
     background-color: lightpink;
 }
@@ -10,22 +14,23 @@
     background-color: paleturquoise;
     padding: 8px;
     text-align: center;
-    border-radius: 30px;
+    border-radius: $radius2;
     border: 3px double lightcoral;
-    box-shadow: 2px 2px 2px black, 5px 5px 6px gray;
-
+    box-shadow: 2px 2px 2px black, 5px 5px 6px gray, 10px 10px 10px gray;
 }
 
 th {
     padding: 10px;
-    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    border-radius: 20%;
+    font-family: $font;
+    border-radius: $radius1;
+    border-bottom : 1px solid white;
+    border-top: 1px solid black;
 
 }
 
 td {
     padding: 8px;
-    font-family: cursive;
-    border-radius: 20px;
+    font-family: $font;
+    border-radius: $radius1;
     box-shadow: 1px 1px 1px black ;
 }
