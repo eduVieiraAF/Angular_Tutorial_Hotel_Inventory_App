@@ -15,26 +15,7 @@
     <button type="button" class="btn btn-outline-info" id="add" (click)="addRoom()">Check-out <br />available rooms {{ rooms.availableRooms }} </button>
     <button type="button" class="btn btn-outline-info" id="take" (click)="takeRoom()">Check-in <br />Booked rooms {{ rooms.bookedRooms }} </button>
 <hr>
-<h2>Room Types</h2>
-<!--{{roomList}}-->
-<table class="m-table">
-    <tr>
-        <th>Even/Odd</th>
-        <th>Index</th>
-        <th>Room type</th>
-        <th>Room price</th>
-        <th>Room amenities</th>
-        <th>Rating</th>
-        <th>Check-in time</th>
-    </tr>
-    <tr [ngClass]="e? 'even' : 'odd'"
-    *ngFor = 'let room of roomList; let e = even; let o = odd; let i = index'>
-        <td>{{ e ? "Even" : "Odd" }}</td>
-        <td>{{ i }}</td>
-        <td>{{ room.roomType | titlecase}}</td>
-        <td>{{ room.price | currency : "BRL" }}</td>
-        <td>{{ room.amenities | lowercase }}</td>
-        <td>{{ room.rating | number: "1.1-2"}}</td>
-        <td>{{ room.checkInTime | date }}</td>
-    </tr>
-</table>
+
+<hinv-rooms-list [rooms]="roomList" (selectedRoom)="selectRoom($event)">
+
+</hinv-rooms-list>

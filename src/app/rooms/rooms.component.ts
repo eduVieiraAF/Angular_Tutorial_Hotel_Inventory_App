@@ -12,6 +12,8 @@ export class RoomsComponent implements OnInit {
     hotelName = 'Palm Tree Spa';
     //numberOfRooms = 10;
 
+    constructor() { }
+
     rooms: Room = {
         availableRooms: 15,
         bookedRooms: 10,
@@ -19,44 +21,51 @@ export class RoomsComponent implements OnInit {
     };
 
     roomList: RoomList[] = [
-        {
-            roomType: 'Deluxe 1',
-            amenities: 'Free wifi, AC, pantry',
-            checkInTime: new Date('10-Sep-2022'),
-            checkOutTime: new Date('12-Sep-2022'),
-            price: 490,
-            photo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPa8YY87r0NStXs2OOWbLAltPg-ld7kgQoNw&usqp=CAU',
-            rating: 4.178
-        },
 
-        {
-            roomType: 'Deluxe 2',
-            amenities: 'Free wifi, AC, pantry, washer-dryer',
-            checkInTime: new Date('10-Sep-2022'),
-            checkOutTime: new Date('12-Sep-2022'),
-            price: 690,
-            photo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPa8YY87r0NStXs2OOWbLAltPg-ld7kgQoNw&usqp=CAU',
-            rating: 4.678
-        },
-
-        {
-            roomType: 'Deluxe 3',
-            amenities: 'Free wifi, AC, pantry, washer-dryer, hot tub',
-            checkInTime: new Date('10-Sep-2022'),
-            checkOutTime: new Date('12-Sep-2022'),
-            price: 890,
-            photo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPa8YY87r0NStXs2OOWbLAltPg-ld7kgQoNw&usqp=CAU',
-            rating: 4.7921
-        },
     ];
 
-    constructor() {}
+    ngOnInit(): void {
+        this.roomList = [
+            {
+                roomType: 'Deluxe 1',
+                amenities: 'Free wifi, AC, pantry',
+                checkInTime: new Date('10-Sep-2022'),
+                checkOutTime: new Date('12-Sep-2022'),
+                price: 490,
+                photo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPa8YY87r0NStXs2OOWbLAltPg-ld7kgQoNw&usqp=CAU',
+                rating: 4.178
+            },
 
-    ngOnInit(): void {}
+            {
+                roomType: 'Deluxe 2',
+                amenities: 'Free wifi, AC, pantry, washer-dryer',
+                checkInTime: new Date('10-Sep-2022'),
+                checkOutTime: new Date('12-Sep-2022'),
+                price: 690,
+                photo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPa8YY87r0NStXs2OOWbLAltPg-ld7kgQoNw&usqp=CAU',
+                rating: 4.678
+            },
+
+            {
+                roomType: 'Deluxe 3',
+                amenities: 'Free wifi, AC, pantry, washer-dryer, hot tub',
+                checkInTime: new Date('10-Sep-2022'),
+                checkOutTime: new Date('12-Sep-2022'),
+                price: 890,
+                photo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPa8YY87r0NStXs2OOWbLAltPg-ld7kgQoNw&usqp=CAU',
+                rating: 4.7921
+            },
+        ]
+
+    }
 
     toggle() {
         this.hideRooms = !this.hideRooms;
         // alert("Clicked")
+    }
+
+    selectRoom(room: RoomList) {
+        console.log(room)
     }
 
     show() {
