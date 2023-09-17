@@ -1,21 +1,34 @@
 <h2 [hidden]="hideTitle">Welcome to {{ hotelName }}</h2>
-<hr>
-<div [ngStyle]="{'color' : rooms.availableRooms ? 'gray' : 'brown'}"
-[hidden]="hideRooms">Number of rooms:<br>
+<hr />
+<div
+    [ngStyle]="{ color: rooms.availableRooms ? 'gray' : 'brown' }"
+    [hidden]="hideRooms"
+>
+    Number of rooms:<br />
 
-<label>available: </label><label [innerText]="rooms.availableRooms"></label><br>
-<label>Booked: </label><label [innerText]="rooms.bookedRooms"></label><br>
-<label *ngIf="rooms.availableRooms  == 0 ">ALL BOOKED</label>
-</div><br>
+    <label>available: </label><label [innerText]="rooms.availableRooms"></label
+    ><br />
+    <label>Booked: </label><label [innerText]="rooms.bookedRooms"></label><br />
+    <label *ngIf="rooms.availableRooms == 0">ALL BOOKED</label>
+</div>
+<br />
 
-<input type="checkbox"(click)="toggle()"><label>Show rooms</label><br>
-<input type="checkbox" (click)="show()"><label>Hide title</label><br>
-<br>
+<input type="checkbox" (click)="toggle()" /><label>Show rooms</label><br />
+<input type="checkbox" (click)="show()" /><label>Hide title</label><br />
+<br />
 
-    <button type="button" class="btn btn-outline-info" id="add" (click)="addRoom()">Check-out <br />available rooms {{ rooms.availableRooms }} </button>
-    <button type="button" class="btn btn-outline-info" id="take" (click)="takeRoom()">Check-in <br />Booked rooms {{ rooms.bookedRooms }} </button>
-<hr>
+<button type="button" class="btn btn-outline-info" id="add" (click)="addRoom()">
+    Check-out <br />available rooms {{ rooms.availableRooms }}
+</button>
+<button
+    type="button"
+    class="btn btn-outline-info"
+    id="take"
+    (click)="takeRoom()"
+>
+    Check-in <br />Booked rooms {{ rooms.bookedRooms }}
+</button>
+<hr />
 
 <hinv-rooms-list [rooms]="roomList" (selectedRoom)="selectRoom($event)">
-
 </hinv-rooms-list>

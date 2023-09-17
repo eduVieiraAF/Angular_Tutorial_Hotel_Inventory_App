@@ -2,6 +2,10 @@ $font : Verdana, Geneva, Tahoma, sans-serif;
 $radius1 : 20px;
 $radius2 : 30px;
 
+* {
+    margin: 7px;
+}
+
 .even {
     background-color: lightsteelblue;
 }

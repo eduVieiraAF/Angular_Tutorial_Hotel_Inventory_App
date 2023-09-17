@@ -12,6 +12,8 @@ export class RoomsComponent implements OnInit {
     hotelName = 'Palm Tree Spa';
     //numberOfRooms = 10;
 
+    selectedRoom!: RoomList;
+
     constructor() { }
 
     rooms: Room = {
