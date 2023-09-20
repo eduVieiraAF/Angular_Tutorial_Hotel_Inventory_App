@@ -30,5 +30,7 @@
 </button>
 <hr />
 
+<!-- <div *ngIf="selectedRoom">{{ selectedRoom | json }}</div> -->
+
 <hinv-rooms-list [rooms]="roomList" (selectedRoom)="selectRoom($event)">
 </hinv-rooms-list>

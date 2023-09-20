@@ -67,6 +67,7 @@ export class RoomsComponent implements OnInit {
     }
 
     selectRoom(room: RoomList) {
+        this.selectedRoom = room
         console.log(room)
     }
 
